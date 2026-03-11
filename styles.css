@@ -1,0 +1,154 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #F8C8DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #FFFDD0;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #FFFDD0;
+}
+
+/* Section Styles */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffdf7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #F8C8DC;
+    border-bottom: 2px solid #F8C8DC;
+    padding-bottom: 5px;
+}
+
+section h3 {
+    color: #F8C8DC;
+    margin-top: 15px;
+}
+
+/* Spotlight Image */
+.spotlight-content {
+    position: relative;
+}
+
+.spotlight-image, .photo {
+    float: right;
+    width: 100px;           /* square width */
+    height: 100px;          /* square height */
+    object-fit: cover;      /* crop without distortion */
+    margin: 0 0 10px 15px;  /* spacing between text and image */
+    border-radius: 8px;     /* optional rounded corners */
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;    /* evenly divides columns */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #aaa;
+    text-align: left;
+    word-wrap: break-word;  /* ensures text wraps inside cells */
+}
+
+th {
+    background-color: #F8C8DC;
+}
+
+/* Optional: set column widths */
+th:first-child, td:first-child {
+    width: 30%;
+}
+th:last-child, td:last-child {
+    width: 70%;
+}
+
+/* Links */
+a {
+    color: #F8C8DC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #F8C8DC;
+    color: #FFFDD0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+    table, th, td {
+        font-size: 0.9em;
+    }
+    table {
+        display: block;
+        overflow-x: auto; /* horizontal scroll for small screens */
+    }
+    .spotlight-image, .photo {
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+        width: 100px;
+        height: 100px;
+    }
+}
