@@ -85,6 +85,20 @@ color: #F8C8DC;
 margin-top: 15px;
 }
 
+/* Spotlight Image */
+.spotlight-content {
+    position: relative;
+}
+
+.spotlight-image, .photo {
+    float: right;
+    width: 100px;           /* square width */
+    height: 100px;          /* square height */
+    object-fit: cover;      /* crop without distortion */
+    margin: 0 0 10px 15px;  /* spacing between text and image */
+    border-radius: 8px;     /* optional rounded corners */
+}
+
 /* Image Gallery */
 .image-gallery {
 display: flex;
