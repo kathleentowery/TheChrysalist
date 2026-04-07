@@ -1,205 +1,223 @@
 /* General Styles */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+height: 100%;
+margin: 0;
+padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #fff8f0;
-    color: #333;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
+background-color: #fff8f0;
+color: #333;
 }
 
 /* Header */
 header {
-    background-color: #F8C8DC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-align: center;
-    padding: 30px 10px;
-}
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
-    margin: 10px 0;
+background-color: #F8C8DC;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+text-align: center;
+padding: 30px 10px;
+flex-wrap: wrap;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    font-weight: bold;
-    color: #F8C8DC;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
 .logo {
-    width: 60px;
-    height: auto;
+width: 60px;
+height: auto;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #FFFDD0;
+margin: 0;
+font-size: 2.5em;
+color: #FFFDD0;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-    color: #FFFDD0;
+margin: 10px 0 0;
+font-size: 1.2em;
+color: #FFFDD0;
+}
+
+/* Navigation */
+nav ul {
+list-style-type: none;
+text-align: center;
+padding: 0;
+margin: 10px 0;
+}
+
+nav ul li {
+display: inline;
+margin: 0 15px;
+}
+
+nav a {
+font-weight: bold;
+color: #F8C8DC;
+text-decoration: none;
+}
+
+nav a:hover {
+text-decoration: underline;
 }
 
 /* Section Styles */
 section {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fffdf7;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+max-width: 900px;
+margin: 20px auto;
+padding: 20px;
+background-color: #fffdf7;
+border-radius: 10px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
 section h2 {
-    color: #F8C8DC;
-    border-bottom: 2px solid #F8C8DC;
-    padding-bottom: 5px;
+color: #F8C8DC;
+border-bottom: 2px solid #F8C8DC;
+padding-bottom: 5px;
 }
 
 section h3 {
-    color: #F8C8DC;
-    margin-top: 15px;
-}
-
-/* Spotlight Image */
-.spotlight-content {
-    position: relative;
-}
-
-.spotlight-image, .photo {
-    float: right;
-    width: 100px;           /* square width */
-    height: 100px;          /* square height */
-    object-fit: cover;      /* crop without distortion */
-    margin: 0 0 10px 15px;  /* spacing between text and image */
-    border-radius: 8px;     /* optional rounded corners */
+color: #F8C8DC;
+margin-top: 15px;
 }
 
 /* Image Gallery */
 .image-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+display: flex;
+justify-content: space-between;
+gap: 15px;
+flex-wrap: wrap;
+margin-top: 15px;
 }
 
 .image-gallery figure {
-    text-align: center;
-    flex: 1 1 200px;
+text-align: center;
+flex: 1 1 200px;
 }
 
 .gallery-img {
-    width: 100%;
-    max-width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
+width: 100%;
+max-width: 180px;
+height: 120px;
+object-fit: cover;
+border-radius: 8px;
 }
 
 .image-gallery figcaption {
-    margin-top: 5px;
-    font-size: 0.9em;
+margin-top: 5px;
+font-size: 0.9em;
 }
+
 /* Lists */
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+list-style-type: disc;
+padding-left: 20px;
 }
 
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    table-layout: fixed;    /* evenly divides columns */
+/* =========================
+MODERN TABLE STYLING
+========================= */
+
+.life-cycle-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+font-size: 0.95em;
+overflow: hidden;
+border-radius: 10px;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #aaa;
-    text-align: left;
-    word-wrap: break-word;  /* ensures text wraps inside cells */
+/* Header */
+.life-cycle-table thead {
+background-color: #F8C8DC;
+color: #fff;
 }
 
-th {
-    background-color: #F8C8DC;
+.life-cycle-table th {
+padding: 14px;
+text-align: left;
+font-weight: bold;
 }
 
-/* Optional: set column widths */
-th:first-child, td:first-child {
-    width: 30%;
+/* Cells */
+.life-cycle-table td {
+padding: 12px 14px;
+border-bottom: 1px solid #eee;
+vertical-align: top;
 }
-th:last-child, td:last-child {
-    width: 70%;
+
+/* Zebra striping */
+.life-cycle-table tbody tr:nth-child(even) {
+background-color: #fff3f7;
+}
+
+/* Hover effect */
+.life-cycle-table tbody tr:hover {
+background-color: #ffe4ec;
+transition: background 0.2s ease;
+}
+
+/* First column emphasis */
+.life-cycle-table td:first-child {
+font-weight: bold;
+color: #d96c9d;
+}
+
+/* Remove last row border */
+.life-cycle-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+/* Make table scrollable on small screens */
+.table-wrapper {
+overflow-x: auto;
 }
 
 /* Links */
 a {
-    color: #F8C8DC;
-    text-decoration: none;
+color: #F8C8DC;
+text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #F8C8DC;
-    color: #FFFDD0;
-    width: 100%;
-    box-sizing: border-box;
+text-align: center;
+padding: 15px;
+background-color: #F8C8DC;
+color: #FFFDD0;
+width: 100%;
+box-sizing: border-box;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-    section {
-        margin: 10px;
-        padding: 15px;
-    }
-    table, th, td {
-        font-size: 0.9em;
-    }
-    table {
-        display: block;
-        overflow-x: auto; /* horizontal scroll for small screens */
-    }
-    .spotlight-image, .photo {
-        float: none;
-        display: block;
-        margin: 0 auto 10px;
-        width: 100px;
-        height: 100px;
-    }
-        /* Mobile gallery layout */
-    .image-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
+header h1 {
+font-size: 2em;
 }
+
+```
+section {
+    margin: 10px;
+    padding: 15px;
+}
+
+.image-gallery {
+    flex-direction: column;
+    align-items: center;
+}
+
+.life-cycle-table {
+    font-size: 0.85em;
+}
+```
+
+}
+
