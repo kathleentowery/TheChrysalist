@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Butterfly Species Guide - The Chrysalist</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <img src="images/the-chrysalist-logo.png" class="logo">
+    <h1>The Chrysalist</h1>
+    <p>Butterfly Species Guide</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lifecycle.html">Life Cycle</a></li>
+        <li><a href="species.html">Species Guide</a></li>
+        <li><a href="habitats.html">Habitats & Migration</a></li>
+    </ul>
+</nav>
+
+<!-- TABLE -->
+<section>
+<h2>Common Butterfly Species</h2>
+
+<div class="table-wrapper">
+<table class="life-cycle-table">
+<thead>
+<tr>
+<th>Species</th>
+<th>Color</th>
+<th>Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monarch</td>
+<td>Orange & Black</td>
+<td>North America</td>
+</tr>
+<tr>
+<td>Swallowtail</td>
+<td>Yellow & Blue</td>
+<td>Worldwide</td>
+</tr>
+<tr>
+<td>Painted Lady</td>
+<td>Orange & Brown</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>Blue Morpho</td>
+<td>Bright Blue</td>
+<td>South America</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- SLIDESHOW -->
+<section>
+<h2>Butterfly Gallery</h2>
+
+<div class="slideshow-container">
+
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1525468552045-b18dbaa5a45f?q=80&w=3629&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slide-img">
+        <p>Monarch Butterfly</p>
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1545310834-cd6a8a0884b8?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slide-img">
+        <p>Swallowtail Butterfly</p>
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1704265586955-6d800100afdb?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slide-img">
+        <p>Painted Lady</p>
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1773606007798-b1bd43f27875?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slide-img">
+        <p>Blue Morpho</p>
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+</div>
+</section>
+
+<!-- MONARCH HIGHLIGHT -->
+<section id="monarch-highlight">
+<h2>Monarch Butterfly Spotlight</h2>
+<p>
+Monarch butterflies are famous for their incredible migration journey spanning thousands of miles across North America.
+</p>
+
+<p>
+👉 <a href="habitats.html#monarch-migration">Read about Monarch Migration</a>
+</p>
+</section>
+
+<footer>
+<p>Created by Kathleen Towery – 2026</p>
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? "block" : "none";
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide >= slides.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>
