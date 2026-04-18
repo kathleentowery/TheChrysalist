@@ -234,4 +234,46 @@ section {
 ```
 
 }
+/* SLIDESHOW */
+.slideshow-container {
+position: relative;
+max-width: 400px;
+margin: auto;
+text-align: center;
+}
 
+.slide {
+display: none;
+}
+
+.slide-img {
+width: 100%;
+border-radius: 10px;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0,0,0,0.5);
+color: white;
+border: none;
+padding: 10px;
+border-radius: 50%;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+
+iframe {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 20px auto;
+}
