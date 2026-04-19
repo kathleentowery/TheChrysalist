@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common Threats - The Chrysalist</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <img src="images/the-chrysalist-logo.png" class="logo">
+    <h1>The Chrysalist</h1>
+    <p>Common Threats to Butterflies</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lifecycle.html">Life Cycle</a></li>
+        <li><a href="species.html">Species Guide</a></li>
+        <li><a href="habitats.html">Habitats & Migration</a></li>
+        <li><a href="matter.html">Why They Matter</a></li>
+        <li><a href="threats.html">Common Threats</a></li>
+    </ul>
+</nav>
+
+<!-- HABITAT LOSS -->
+<section>
+<h2>Habitat Loss</h2>
+<p>
+Habitat loss is one of the greatest threats to butterfly populations worldwide. Urban development, agriculture, and deforestation destroy the natural environments that butterflies depend on for food and reproduction. When native plants disappear, butterflies lose both nectar sources and host plants needed for laying eggs. Fragmented habitats also make it difficult for butterflies to migrate and find suitable breeding grounds.
+</p>
+</section>
+
+<!-- ARROWS -->
+<section class="arrows">
+⬇️ ⬇️
+</section>
+
+<!-- TWO COLUMNS -->
+<section class="threat-columns">
+
+<div>
+<h2>Pesticides</h2>
+<p>
+Pesticides are widely used in agriculture and gardening to control pests, but they can also harm butterflies and other beneficial insects. Chemicals can contaminate the plants butterflies rely on, poisoning both caterpillars and adults. Even small amounts can disrupt reproduction and reduce survival rates.
+</p>
+</div>
+
+<div>
+<h2>Climate Change</h2>
+<p>
+Climate change is altering temperature patterns and seasonal cycles, which can disrupt butterfly migration and breeding. Warmer temperatures may shift habitats, forcing species to move or adapt quickly. Extreme weather events, such as storms and droughts, further threaten butterfly survival.
+</p>
+</div>
+
+</section>
+
+<!-- CONSERVATION -->
+<section>
+<h2>Conservation Efforts</h2>
+
+<div class="slideshow-container">
+
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1560257777-820fccc5ee0c?q=80&w=1587&auto=format&fit=crop" class="slide-img">
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1710705578455-22bd0c3cead0?q=80&w=1587&auto=format&fit=crop" class="slide-img">
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1604367285428-a1d3e0731a44?q=80&w=1587&auto=format&fit=crop" class="slide-img">
+    </div>
+
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1593999094742-4f5280054b23?q=80&w=1587&auto=format&fit=crop" class="slide-img">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+</div>
+
+<p>
+You can help protect butterflies by planting native flowers, avoiding pesticides, and supporting conservation organizations. Even small actions can make a big difference.
+</p>
+
+<ul>
+<li><a href="https://butterfly-conservation.org" target="_blank">Butterfly Conservation</a></li>
+<li><a href="https://naba.org" target="_blank">North American Butterfly Association</a></li>
+<li><a href="https://xerces.org/endangered-species/butterflies" target="_blank">Xerces Society</a></li>
+</ul>
+
+</section>
+
+<footer>
+<p>Created by Kathleen Towery – 2026</p>
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? "block" : "none";
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide >= slides.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>
