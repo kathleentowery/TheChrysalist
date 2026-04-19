@@ -232,7 +232,25 @@ section {
     font-size: 0.85em;
 }
 ```
+.food-chain {
+    flex-direction: column;
+}
 
+.pollination-images img {
+    width: 100%;
+}
+
+.food-images {
+    flex-direction: row;
+}
+
+.food-images img {
+    width: 48%;
+}
+
+.threat-columns {
+    flex-direction: column;
+}
 }
 /* SLIDESHOW */
 .slideshow-container {
@@ -276,4 +294,72 @@ max-width: 100%;
 height: auto;
 display: block;
 margin: 20px auto;
+}
+/* =========================
+NEW PAGE: WHY BUTTERFLIES MATTER
+========================= */
+
+/* Pollination images row */
+.pollination-images {
+display: flex;
+gap: 15px;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.pollination-images img {
+width: 30%;
+min-width: 150px;
+border-radius: 8px;
+object-fit: cover;
+}
+
+/* Food chain layout */
+.food-chain {
+display: flex;
+gap: 20px;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.food-text {
+flex: 1;
+}
+
+.food-images {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.food-images img {
+width: 100%;
+border-radius: 8px;
+object-fit: cover;
+}
+
+/* =========================
+NEW PAGE: THREATS
+========================= */
+
+/* Arrow styling */
+.arrows {
+text-align: center;
+font-size: 2.5em;
+margin: 10px 0;
+color: #F8C8DC;
+}
+
+/* Two-column threat layout */
+.threat-columns {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.threat-columns div {
+flex: 1;
+min-width: 250px;
 }
