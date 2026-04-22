@@ -451,3 +451,69 @@ IMAGE GALLERY ADDITIONS
     from { transform: translateY(0px); }
     to   { transform: translateY(-6px); }
 }
+
+/* =========================
+CONTACT PAGE STYLING
+========================= */
+
+/* Centered form card */
+.contact-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffdf7;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Form layout */
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+.contact-card input,
+.contact-card textarea,
+.contact-card select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Submit button */
+.contact-card input[type="submit"] {
+    background-color: #F8C8DC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-card input[type="submit"]:hover {
+    background-color: #f3a9c5;
+}
+
+/* Contact info box */
+.contact-info {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffdf7;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Links styling */
+.contact-info a {
+    color: #F8C8DC;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
